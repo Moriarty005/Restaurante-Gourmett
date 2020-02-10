@@ -259,6 +259,7 @@ namespace GourmetteRestaurante
 
         public static void actualizarCarrito()
         {
+            sumarCarrito();
             num_productos.Text = "(" + numero + ")";
         }
 
@@ -266,6 +267,16 @@ namespace GourmetteRestaurante
         {
                 numero += p.getCantidad();
             
+        }
+
+        public static void sumarCarrito()
+        {
+            numero = 0;
+
+            for (int index = 0; index < carrito_compra.Count; index++)
+            {
+                numero += carrito_compra[index].getCantidad();
+            }
         }
 
         private void boton_carrito_Click(object sender, EventArgs e)
@@ -346,6 +357,8 @@ namespace GourmetteRestaurante
         private void cancelar_pedido_Click(object sender, EventArgs e)
         {
 
+            numero = 0;
+
             foreach (ListViewItem item in Carrito.platos_lista_carrito.Items)
             {
                 item.Remove();
@@ -367,5 +380,17 @@ namespace GourmetteRestaurante
         private void toolTip1_Draw(object sender, DrawToolTipEventArgs e)
         {
                     }
+
+        public static void eliminarPlatoDelCarritoPorNombre(string nombre)
+        {
+
+            for (int index = 0; index < carrito_compra.Count; index++)
+            {
+                if (carrito_compra[index].getNombre().Equals(nombre))
+                {
+                    carrito_compra.Remove(carrito_compra[index]);
+                }
+            }
+        }
     }
 }

@@ -65,7 +65,11 @@ namespace GourmetteRestaurante
             foreach (ListViewItem item in platos_lista_carrito.SelectedItems)
             {
                 item.Remove();
+                Form1.eliminarPlatoDelCarritoPorNombre(item.Text);
             }
+
+            this.calcularTotal();
+            Form1.actualizarCarrito();
         }
 
         private void button2_Click(object sender, EventArgs e)
