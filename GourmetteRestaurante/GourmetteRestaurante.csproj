@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B12363F3-8746-48E3-B5D8-93CA3A91D144}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GourmetteRestaurante</RootNamespace>
+    <AssemblyName>GourmetteRestaurante</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="idiomas_boton">
+      <HintPath>..\idiomas_boton.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Carne.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Carne.Designer.cs">
+      <DependentUpon>Carne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Carrito.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Carrito.Designer.cs">
+      <DependentUpon>Carrito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cocteles.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cocteles.Designer.cs">
+      <DependentUpon>Cocteles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Detalles_platos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Detalles_platos.Designer.cs">
+      <DependentUpon>Detalles_platos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pagar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pagar.Designer.cs">
+      <DependentUpon>pagar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaInicial.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PantallaInicial.Designer.cs">
+      <DependentUpon>PantallaInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pasta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pasta.Designer.cs">
+      <DependentUpon>Pasta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pescao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pescao.Designer.cs">
+      <DependentUpon>Pescao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plato.cs" />
+    <Compile Include="Postres.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Postres.Designer.cs">
+      <DependentUpon>Postres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Seleccionar_tipo_plato.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Seleccionar_tipo_plato.Designer.cs">
+      <DependentUpon>Seleccionar_tipo_plato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vegetales.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vegetales.Designer.cs">
+      <DependentUpon>Vegetales.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Carne.resx">
+      <DependentUpon>Carne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Carrito.resx">
+      <DependentUpon>Carrito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cocteles.resx">
+      <DependentUpon>Cocteles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detalles_platos.resx">
+      <DependentUpon>Detalles_platos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pagar.resx">
+      <DependentUpon>pagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaInicial.resx">
+      <DependentUpon>PantallaInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pasta.resx">
+      <DependentUpon>Pasta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pescao.resx">
+      <DependentUpon>Pescao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Postres.resx">
+      <DependentUpon>Postres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Seleccionar_tipo_plato.resx">
+      <DependentUpon>Seleccionar_tipo_plato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vegetales.resx">
+      <DependentUpon>Vegetales.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
